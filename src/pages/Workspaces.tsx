@@ -4,7 +4,7 @@ import { SlOptionsVertical } from "react-icons/sl";
 import ActivityIndicator from "../components/ActivityIndicator";
 import CurrentTeamContext from "../contexts/CurrentTeamContext";
 import workspace_interface from "../interfaces/workspace_interface";
-import { BaseSyntheticEvent, Fragment, SyntheticEvent, useContext, useEffect, useLayoutEffect, useState } from "react";
+import { BaseSyntheticEvent, Fragment, useContext, useEffect, useLayoutEffect, useState } from "react";
 import { IoAdd, IoClose } from 'react-icons/io5';
 import Skeleton from 'react-loading-skeleton';
 import { FaCreditCard } from 'react-icons/fa6';
