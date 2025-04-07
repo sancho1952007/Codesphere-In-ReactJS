@@ -501,8 +501,8 @@ export default function WorkspacesPage() {
 
                                                             {/* Workspace URL */}
                                                             <td className="padding-10">
-                                                                <a href={`https://${workspace.id}-3000.codesphere.com`} target='_blank'>
-                                                                    {workspace.id}-3000.codesphere.com
+                                                                <a href={`https://${workspace.id}-3000.${workspace.dataCenterId}.codesphere.com`} target='_blank'>
+                                                                    {workspace.id}-3000.{workspace.dataCenterId}.codesphere.com
                                                                 </a>
                                                             </td>
 
