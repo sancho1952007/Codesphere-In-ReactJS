@@ -1,0 +1,196 @@
+.domains-page {
+    /* 100% - 20px to adjust for the padding */
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+}
+
+.domains-page #main-section {
+    width: calc(100% - 20px);
+    background-color: #1e1c27;
+    margin-top: 10px;
+}
+
+.domains-page #main-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.domains-page #main-table>thead {
+    background-color: black;
+    color: #8c899a;
+}
+
+.domains-page #main-table>thead>tr>th {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.domains-page #main-table>tbody {
+    border-bottom: 1px solid var(--border-default-color);
+}
+
+.domains-page #main-table>tbody>tr>td {
+    text-wrap: nowrap;
+}
+
+.domains-page .add-domain-btn {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.1s linear;
+    background-color: rgb(80, 80, 80);
+    cursor: not-allowed;
+    user-select: none;
+}
+
+.domains-page #info-section-div {
+    /* Calculation: 100% width - (16px * 2) for padding - (1px * 2) for border */
+    width: calc(100% - 34px);
+    padding: 16px;
+    background-color: rgb(20, 26, 33);
+    border: 1px solid rgb(21, 44, 71);
+}
+
+.domains-page .icon-div {
+    width: 40px;
+    height: 40px;
+    background-color: #2a2834;
+}
+
+.domains-page .sub-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--border-default-color);
+    margin-top: 10px;
+}
+
+.domains-page .data-section {
+    width: 100%;
+    background-color: #0f0e15;
+    padding-right: 40px;
+}
+
+.domains-page .add-domain-btn.allowed {
+    background-color: blueviolet;
+    cursor: pointer;
+}
+
+.domains-page .add-domain-btn.allowed:active {
+    scale: 0.95;
+}
+
+.domains-page .row-collapsable.collapsed {
+    display: none;
+}
+
+.domains-page #add-domain-section {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.domains-page .sub-table-item {
+    padding: 5px;
+}
+
+.domains-page td.sub-table-item {
+    color: #38A86A;
+}
+
+.domains-page .copy-icon {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.domains-page .copy-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.domains-page .copy-icon:active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.domains-page .check-status-btn {
+    width: fit-content;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #1E1C27;
+    transition: all .10s linear;
+    margin-top: 10px;
+    border-radius: 5px;
+    user-select: none;
+    text-align: center;
+    text-wrap: nowrap;
+}
+
+.domains-page .check-status-btn:hover {
+    background-color: #2A2834;
+}
+
+.domains-page .check-status-btn:active {
+    background-color: #1E1C27;
+}
+
+.domains-page .chip {
+    display: inline;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.domains-page #bulb-icn-div {
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    flex-shrink: 0;
+    background-color: #00b6d7;
+    border-radius: 50%;
+}
+
+.domains-page #search-input-search-icon {
+
+    position: relative;
+    left: 10px;
+    top: 33px;
+}
+
+.domains-page #search-workspace-input {
+    /* Calculation: 100% screen width - 10px padding - 30px padding left */
+    width: calc(100% - 40px);
+    padding-left: 30px;
+}
+
+.domains-page #domain-name-input {
+    min-width: 400px;
+    padding: 10px;
+}
+
+.domains-page .delete-domain-btn {
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:900px) {
+    .domains-page #domain-name-input {
+        width: calc(100vw - 140px);
+        min-width: 0;
+    }
+
+    .domains-page #add-domain-section {
+        display: block;
+    }
+
+    .domains-page #add-domain-input-section {
+        width: fit-content;
+        margin-top: 20px;
+    }
+}

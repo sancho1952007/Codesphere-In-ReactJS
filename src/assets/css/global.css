@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap');
+
+:root {
+    --border-default-color: #282532;
+    --defaut-link-color: #814bf6;
+}
+
+html,
+body {
+    /* To prevent elastic scrolling */
+    overscroll-behavior: none;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+    color: var(--defaut-link-color);
+}
+
+a:hover {
+    color: var(--defaut-link-color);
+}
+
+.input-default {
+    outline: none;
+    background-color: transparent;
+    border: 1px solid var(--border-default-color);
+    outline: none;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.input-default:focus {
+    border: 1px solid blueviolet !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.fd-col {
+    flex-direction: column;
+}
+
+.gap-5 {
+    gap: 5px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.brad-5 {
+    border-radius: 5px;
+}
+
+.brad-10 {
+    border-radius: 10px;
+}
+
+.border-1 {
+    border-width: 1px;
+}
+
+.border-solid {
+    border-style: solid;
+}
+
+.border-default {
+    border-color: var(--border-default-color);
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Barlow', sans-serif;
+}

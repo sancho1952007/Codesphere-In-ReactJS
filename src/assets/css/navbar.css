@@ -1,0 +1,93 @@
+.navbar #team-picker-modal {
+    position: absolute;
+    background-color: #13121a;
+    z-index: 1;
+    margin-top: 50px;
+    margin-left: 5px;
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.navbar #separator {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-default-color);
+}
+
+.navbar .choose-team {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    user-select: none;
+    transition: all .10s linear;
+}
+
+.navbar .choose-team:hover {
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+.navbar .choose-team:active {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+.navbar .navbar-item {
+    all: unset;
+    width: fit-content;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    transition: all .10s linear;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.navbar .navbar-item.active {
+    color: white;
+    background-color: #1e1c27;
+}
+
+.navbar .navbar-item:hover {
+    color: white;
+    background-color: #1e1c27;
+}
+
+.navbar .navbar-item:active {
+    color: white;
+    scale: 0.95;
+}
+
+.navbar #routes-list {
+    width: 100%;
+    border-bottom: 1px solid var(--border-default-color);
+    flex-direction: row;
+    display: flex;
+    overflow: auto;
+}
+
+.navbar .loading-box {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--border-default-color);
+    line-height: 0;
+}
+
+.navbar .team-list-image {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid;
+}

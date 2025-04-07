@@ -1,0 +1,308 @@
+.workspaces-page .new-workspace {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.workspaces-page .new-workspace-modal {
+    width: calc(100% - 60px);
+    max-height: calc(100% - 100px);
+    background-color: #13121a;
+    max-width: 700px;
+    padding: 20px;
+    margin: 20px;
+    user-select: none;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.workspaces-page .new-workspace-modal .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workspaces-page .new-workspace-modal .topbar #close-modal-btn {
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .10s linear;
+}
+
+.workspaces-page .new-workspace-modal .topbar #close-modal-btn:hover {
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+.workspaces-page .new-workspace-modal .topbar #close-modal-btn:active {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+.workspaces-page .new-workspace .deployment-modes {
+    width: calc(100% - 12px);
+    display: flex;
+    border: 1px solid var(--border-default-color);
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    gap: 5px;
+}
+
+.workspaces-page .new-workspace .deployment-mode {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.workspaces-page .new-workspace .deployment-mode.active {
+    background-color: rgb(56, 14, 96);
+}
+
+.workspaces-page .new-workspace-modal .modal-input {
+    width: calc(100% - 22px);
+    background-color: rgb(23, 21, 29);
+    border: 1px solid var(--border-default-color);
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    color: white;
+    margin-top: 20px;
+}
+
+.workspaces-page .new-workspace-modal #create-btn {
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: blueviolet;
+    border-radius: 5px;
+    transition: all .10s linear;
+    color: white;
+}
+
+.workspaces-page .new-workspace-modal #create-btn.disabled {
+    background-color: rgb(102, 49, 151);
+    color: grey;
+}
+
+.workspaces-page .new-workspace-modal #create-btn:hover:not(.disabled) {
+    background-color: rgb(119, 37, 196);
+}
+
+.workspaces-page .new-workspace-modal #create-btn:active:not(.disabled) {
+    background-color: rgb(100, 30, 165);
+}
+
+.workspaces-page .new-workspace-modal .plans {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.workspaces-page .new-workspace-modal .plan {
+    min-width: 50px;
+    width: calc(100% - 100px);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 70px;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    gap: 0;
+    border-bottom: 1px solid var(--border-default-color);
+}
+
+.workspaces-page .new-workspace-modal .plan.selected {
+    background-color: #09090b;
+    border: 1px solid var(--border-default-color);
+    border-bottom: 0;
+    border-top: 2px solid blueviolet;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.workspaces-page .new-workspace-modal .plan .name {
+    text-wrap: nowrap;
+}
+
+.workspaces-page .new-workspace-modal .plan-info {
+    background-color: #09090b;
+    padding: 50px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    text-wrap: nowrap;
+    overflow: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: 500;
+    border: 1px solid var(--border-default-color);
+    border-top: 0;
+}
+
+.workspaces-page .info-section {
+    background-color: rgb(20, 26, 33);
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(21, 44, 71);
+}
+
+.gap {
+    width: 3px;
+    height: 40px;
+    flex-shrink: 0;
+    background-color: var(--border-default-color);
+}
+
+.workspaces-page #separator {
+    display: flex;
+    justify-content: space-between;
+}
+
+.workspaces-page #search-input-div {
+    width: 100%;
+    margin-right: 10px;
+    justify-content: end;
+}
+
+.workspaces-page #search-workspaces-input {
+    width: calc(100% - 200px);
+    padding: 10px;
+    max-width: 500px;
+}
+
+.workspaces-page #new-workspace-btn {
+    width: fit-content;
+    background-color: blueviolet;
+    border-radius: 5px;
+    padding: 5px;
+    user-select: none;
+    cursor: pointer;
+    transition: all .10s linear;
+}
+
+.workspaces-page #new-workspace-btn:hover {
+    background-color: rgb(114, 34, 189);
+}
+
+.workspaces-page #new-workspace-btn:active {
+    background-color: rgb(93, 26, 156);
+}
+
+.workspaces-page #main-table-div {
+    overflow: auto;
+}
+
+.workspaces-page #main-table td a {
+    /* Make it take the default body colour instead of a link colour */
+    color: unset;
+}
+
+.workspaces-page #main-table {
+    width: 100%;
+    /* So that I can set border bottom on the individual table rows */
+    border-collapse: collapse;
+}
+
+.workspaces-page #main-table>thead {
+    background-color: black;
+    color: #8c899a;
+}
+
+.workspaces-page #main-table>thead th {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.workspaces-page #main-table>tbody>tr {
+    border-bottom: 1px solid var(--border-default-color);
+}
+
+.workspaces-page #main-table .th-workspace-name {
+    padding: 10px;
+    min-width: 100px;
+    max-width: 50%;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: start;
+}
+
+.workspaces-page .replica-dot {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.workspaces-page #main-table .workspace-options-btn {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .10s linear;
+}
+
+.workspaces-page #main-table .workspace-options-btn:hover {
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+.workspaces-page #main-table .workspace-options-btn:active {
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+.workspaces-page .workspace-options-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.workspaces-page .workspace-options {
+    width: fit-content;
+    border: 1px solid var(--border-default-color);
+    color: white;
+    user-select: none;
+    z-index: 9999;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.workspaces-page .workspace-options .workspace-option {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .10s linear;
+}
+
+.workspaces-page .workspace-options .workspace-option.delete {
+    background-color: red;
+}
+
+.workspaces-page .workspace-options .workspace-option.delete:hover {
+    background-color: rgb(233, 0, 0);
+}
+
+.workspaces-page .workspace-options .workspace-option.delete:active {
+    background-color: rgb(202, 0, 0);
+}
+
+@media screen and (max-width:700px) {
+    .workspaces-page #separator {
+        display: block;
+    }
+
+    .workspaces-page #search-input-div {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}

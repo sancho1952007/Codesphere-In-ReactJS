@@ -1,0 +1,80 @@
+.marketplace-page #marketplace-info-section {
+    background-color: #0f0e15;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: auto;
+}
+
+.marketplace-page .marketplace-info-section-icon {
+    width: 30px;
+    height: 30px;
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #231c37;
+}
+
+.marketplace-page .h3-title {
+    width: calc(100% - 20px);
+    max-width: 700px;
+    margin: 0;
+    margin-left: 20px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.marketplace-page .cards-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 700px;
+}
+
+.marketplace-page .card {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    background-color: #1e1c27;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #282532;
+    margin: 10px;
+    flex-grow: 1;
+    max-width: 300px;
+    flex-shrink: 1;
+}
+
+.marketplace-page .card h4 {
+    text-align: center;
+    margin: 5px;
+}
+
+.marketplace-page .card span {
+    text-align: center;
+}
+
+.marketplace-page .card img {
+    width: 70px;
+    align-self: center;
+}
+
+@media screen and (max-width:1000px) {
+    .marketplace-page #marketplace-info-section {
+        display: block;
+    }
+
+    .marketplace-page #marketplace-info-section h2 {
+        margin-bottom: 20px;
+        margin-top: -10px;
+    }
+
+    .marketplace-page #marketplace-info-section-icon-2 {
+        /* This is so that there is enough gap on smaller screen due to display:block on parent>parent element */
+        margin-top: 20px;
+    }
+}
