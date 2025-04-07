@@ -1,7 +1,5 @@
 prepare:
   steps:
-    - name: Install Bun
-      command: sudo npm i -g bun
     - name: Install Dependencies
       command: bun install
     - name: Build Code
@@ -10,7 +8,5 @@ test:
   steps: []
 run:
   steps:
-    - name: Install Bun
-      command: sudo npm i -g bun
     - name: Run the server
       command: bun backend-prod
