@@ -121,7 +121,11 @@ export default function NavBar({ team, teams, updateTeam }: {
                             }} />
 
                             <div
-                                className="choose-team">
+                                className="choose-team"
+                                onClick={() => {
+                                    alert('Feature will be implemented in the future!');
+                                }}
+                            >
                                 <IoAdd size={20} />Create New Team
                             </div>
                         </div>

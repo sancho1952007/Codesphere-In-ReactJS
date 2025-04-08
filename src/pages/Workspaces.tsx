@@ -14,6 +14,8 @@ import { MdDelete } from 'react-icons/md';
 
 // To cache the result. Else, it would show the loader every time I navigated back to the page, may it be through the back button or by clicking the workspaces button
 let workspacesData: null | workspace_interface[] = null;
+// To cache the result
+let workspacePlansCache: null | workspace_plan[] = null;
 
 interface workspace_plan {
     "id": number,
@@ -44,7 +46,7 @@ export default function WorkspacesPage() {
     // Handles the text input value of the git url in new workspace modal
     const [gitURLInput, setGitURLInput] = useState<string>('');
     // Handles the workspaces plans list
-    const [workspacePlans, setWorkspacePlans] = useState<null | workspace_plan[]>(null);
+    const [workspacePlans, setWorkspacePlans] = useState<null | workspace_plan[]>(workspacePlansCache);
     // Handles whether to list off when unused or always on workspaces. By default, show an off when unused domain
     const [isOnDemandSelected, setIsOnDemandSelected] = useState<boolean>(true);
     // Handles which plan is selected
@@ -72,7 +74,8 @@ export default function WorkspacesPage() {
     }, [CurrentTeam]);
 
     useEffect(() => {
-        if (newWorkspaceModalVisible) {
+        // Fetch the workspace plans once, when it's really required
+        if (!workspacePlans) {
             fetch(`${import.meta.env.VITE_API_BASE_URL}/metadata/workspace-plans`, {
                 headers: {
                     Authorization: CurrentSession
@@ -92,11 +95,22 @@ export default function WorkspacesPage() {
                     data = data.filter(x => x.title !== 'Free');
                     data = data.filter(x => !x.deprecated);
                     setWorkspacePlans(data);
+                    workspacePlansCache = data;
                 })
                 .catch(err => {
                     console.error(err);
                     alert('Failed to send fetch list of workspace plans request');
                 });
+        }
+    }, []);
+
+    useEffect(() => {
+        if (newWorkspaceModalVisible) {
+            // Reset new workspace modal values to blank when the new workspace button is clicked
+            setGitURLInput('');
+            setNewWorkspaceName('');
+            setNewWorkspaceCurrentlySelectedPlan(20);
+            setIsOnDemandSelected(true);
         }
     }, [newWorkspaceModalVisible]);
 

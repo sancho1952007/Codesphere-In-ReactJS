@@ -276,8 +276,11 @@ export default function DomainsPage() {
                                 <b>Domains: {domainsList?.length}</b>
                             </div>
                             <br />
-                            <IoSearch id="search-input-search-icon" /><input
+                            <IoSearch id="search-input-search-icon" />
+                            <input
                                 placeholder="Ex: yourdomain.com"
+                                autoCapitalize='off'
+                                autoComplete='off'
                                 className="input-default padding-10"
                                 id="search-workspace-input"
                                 onChange={inp => {
