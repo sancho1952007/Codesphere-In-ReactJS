@@ -6,7 +6,6 @@ import CurrentTeamContext from "../contexts/CurrentTeamContext";
 import workspace_interface from "../interfaces/workspace_interface";
 import { BaseSyntheticEvent, Fragment, useContext, useEffect, useLayoutEffect, useState } from "react";
 import { IoAdd, IoClose } from 'react-icons/io5';
-import Skeleton from 'react-loading-skeleton';
 import { FaCreditCard } from 'react-icons/fa6';
 import loader from '../assets/loader.gif';
 import { CiCircleCheck, CiPause1 } from 'react-icons/ci';
@@ -359,7 +358,7 @@ export default function WorkspacesPage() {
                                 </div>
                             </>
                         ) : (
-                            <Skeleton />
+                            <>Loading Plans...</>
                         )}
 
                         <div id='create-btn'
