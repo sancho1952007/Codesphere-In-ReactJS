@@ -278,7 +278,7 @@ export default function DomainsPage() {
                             <br />
                             <IoSearch id="search-input-search-icon" />
                             <input
-                                placeholder="Ex: yourdomain.com"
+                                placeholder="Search Domains"
                                 autoCapitalize='off'
                                 autoComplete='off'
                                 className="input-default padding-10"
