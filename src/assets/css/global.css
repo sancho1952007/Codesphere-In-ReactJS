@@ -7,7 +7,6 @@ html,
 body {
     /* To prevent elastic scrolling */
     overscroll-behavior: none;
-    color: white;
 }
 
 html,
@@ -96,4 +95,5 @@ a:hover {
     padding: 0;
     -webkit-tap-highlight-color: transparent;
     font-family: 'Barlow', sans-serif;
+    color: white;
 }
