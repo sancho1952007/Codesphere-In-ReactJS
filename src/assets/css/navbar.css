@@ -91,3 +91,22 @@
     overflow: hidden;
     border: 1px solid;
 }
+
+.navbar .logout-btn {
+    background-color: rgb(255, 0, 0, 0.3);
+    color: red;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    transition: all .10s linear;
+}
+
+.navbar .logout-btn:hover {
+    background-color: rgb(255, 0, 0, 0.2);
+}
+
+.navbar .logout-btn:active {
+    scale: 0.95;
+}

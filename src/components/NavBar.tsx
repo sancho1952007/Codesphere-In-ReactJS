@@ -130,7 +130,7 @@ export default function NavBar({ team, teams, updateTeam }: {
                             </div>
                         </div>
 
-                        {/* Div to maintain space between team picker and current user profile */}
+                        {/* Div to maintain space between team picker and logout button */}
                         <div id="separator">
                             {/* The always visible team picker */}
                             <div
@@ -157,15 +157,16 @@ export default function NavBar({ team, teams, updateTeam }: {
                                 {team.name}
                             </div>
 
-                            {/* Right side current user profile */}
-                            <img
-                                alt="my-image"
-                                className="team-list-image"
-                                style={{
-                                    margin: 10
+                            {/* Right side logout button */}
+                            <div className="logout-btn flex align-center justify-center"
+                                onClick={() => {
+                                    Cookies.remove('Codesphere_API_Key');
+                                    Cookies.remove('current-team');
+                                    window.location.reload();
                                 }}
-                                src={team.avatarUrl || 'https://ui-avatars.com/api/?name=' + team.name}
-                            />
+                            >
+                                Logout
+                            </div>
                         </div>
                     </>
                 ) : (

@@ -18,15 +18,15 @@
 }
 
 .login-page #continue-btn {
-    width: calc(100% - 30px);
+    width: calc(100% - 40px);
     background-color: blue;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
     margin-top: 10px;
     cursor: pointer;
     user-select: none;
-    max-width: 710px;
+    max-width: 700px;
     transition: all .10s linear;
 }
 
