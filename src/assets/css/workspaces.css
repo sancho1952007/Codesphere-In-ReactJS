@@ -71,6 +71,7 @@
     outline: none;
     color: white;
     margin-top: 20px;
+    font-size: 15px;
 }
 
 .workspaces-page .new-workspace-modal #create-btn {
