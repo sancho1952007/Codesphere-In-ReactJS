@@ -233,6 +233,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: start;
+    cursor: pointer;
 }
 
 .workspaces-page .replica-dot {

@@ -510,7 +510,10 @@ export default function WorkspacesPage() {
                                                         <tr key={workspace.id}>
 
                                                             {/* Workspace Name */}
-                                                            <th className="th-workspace-name">{workspace.name}</th>
+                                                            <th className="th-workspace-name" onClick={() => {
+                                                                // Open the workspace ui in a new tab when the workspace name is clicked
+                                                                window.open(`https://codesphere.com/ide/teams/${CurrentTeam?.id}/workspaces/${workspace.id}`, '_blank');
+                                                            }}>{workspace.name}</th>
 
                                                             {/* Workspace URL */}
                                                             <td className="padding-10">
